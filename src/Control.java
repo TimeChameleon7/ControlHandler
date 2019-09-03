@@ -30,17 +30,17 @@ public abstract class Control {
         }
 
         public Factory setShift() {
-            modifiers += InputEvent.SHIFT_DOWN_MASK;
+            modifiers ^= InputEvent.SHIFT_DOWN_MASK;
             return this;
         }
 
         public Factory setControl() {
-            modifiers += InputEvent.CTRL_DOWN_MASK;
+            modifiers ^= InputEvent.CTRL_DOWN_MASK;
             return this;
         }
 
         public Factory setAlt() {
-            modifiers += InputEvent.ALT_DOWN_MASK;
+            modifiers ^= InputEvent.ALT_DOWN_MASK;
             return this;
         }
     }
